@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping</title>
+</head>
+<body>
+    <!--обернем весь наш раздел в элемент <div>-->
+        <div id="wrapper">
+            <!--определяем наш заголовок -->
+            <header>
+                <div id="page-top">
+                    <h1 class="title">Shopaholic</h1>
+                    <p>My shopping list</p>
+                    <!--добавляем возможность поиска и скрытия внутри заголовка -->
+                    <form id="search-item">
+                        <!--функция поиска -->
+                        <input type="text" placeholder="Search items...">
+                        <!--скрыть функциональность с помощью checkbox -->
+                        <div id="check">
+                            <label for="hide">Hide List</label>
+                            <input type="checkbox" id="hide">
+                        </div>
+                    </form>
+                </div>
+            </header>
+
+            <!--добавление элемента в наш основной список с помощью элемента <form> -->
+            <form id="add-item">
+                <input type="text" placeholder="What do you want to buy?" />
+                <button>Add</button>
+            </form>
+
+            <!-- определить раздел нашего списка продуктов внутри тега <div>-->
+            <div id="grocery-list">
+                <h2 class="title">Items to Buy</h2>
+                <!--вставляем каждый товар в таблицу -->
+                <ul>
+                    <li>
+                        <span class="item">Milk</span>
+                        <span class="delete">delete</span>
+                    </li>
+                    <li>
+                        <span class="item">Sugar & Spice</span>
+                        <span class="delete">delete</span>
+                    </li>
+                    <li>
+                        <span class="item"> Something to drink</span>
+                        <span class="delete">delete</span>
+                    </li>
+                    <li>
+                        <span class="item">Pizza</span>
+                        <span class="delete">delete</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--добавление вкладки внизу страницы -->
+            <div id="tab-wrapper">
+                <ul class="heading">
+                    <li data-clicked="#joke" class="active">Food Joke</li>
+                    <li data-clicked="#facts">Did you know</li>
+                </ul>
+                <div id="joke" class="panel">
+                    <p>What do you call a fake noodle?</p>
+                    <button id="showAnswer">Answer</button>
+                    <p id="answer"></p>
+                </div>
+                <div id="facts" class="panell">
+                    <p>This is what I learnt about food this week</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ullam sint, fugiat aliquam asperiores eum voluptas distinctio repellendus dicta impedit.</p>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+</body>
+</html>
